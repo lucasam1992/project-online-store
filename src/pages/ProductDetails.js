@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CartButton from '../components/CartButton';
+import ReviewForm from '../components/ReviewForm';
 
 class ProductDetails extends React.Component {
   constructor() {
@@ -57,11 +58,11 @@ class ProductDetails extends React.Component {
           Adicionar ao Carrinho
         </button>
         <br />
-        {/* essa parte era pra ser renderizada dentro do carrinho */}
         <span data-testid="shopping-cart-product-quantity">
           quantidade:
           {newCartItemId.length === 0 ? 0 : newCartItemId[0].q}
         </span>
+        <ReviewForm />
       </div>
     );
   }
