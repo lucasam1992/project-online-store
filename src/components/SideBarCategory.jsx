@@ -18,6 +18,7 @@ export default class SideBarCategory extends Component {
   awaitResponse = async () => {
     const { categories } = this.props;
     const data = await categories;
+    console.log(data);
     this.setState({ categoriesList: data, loading: false });
   };
 

@@ -4,8 +4,8 @@ import ReactStart from 'react-rating-stars-component';
 // Link para criar o rating
 // https://www.npmjs.com/package/react-rating-stars-component
 class ReviewForm extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       email: '',
       avaliacao: '',
@@ -51,7 +51,12 @@ class ReviewForm extends React.Component {
             value={ avaliacao }
             onChange={ this.handleMessage }
           />
-          <button type="submit">Avaliar</button>
+          <button
+            type="submit"
+            onSubmit={ this.handleSave }
+          >
+            Avaliar
+          </button>
         </form>
       </div>
     );
